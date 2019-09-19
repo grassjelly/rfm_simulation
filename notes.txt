@@ -1,0 +1,24 @@
+sudo apt-get install ros-kinetic-turtlebot-simulator
+
+sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-ros-kinetic-turtlebot-simulator turtlebot-rviz-launchers
+
+ sudo apt-get install ros-kinetic-hector-sensors-description
+ sudo apt-get install ros-kinetic-robot-pose-publisher
+
+pip install paho-mqtt
+
+
+mkdir -p rfm_ws/src
+cd rfm_ws/src/
+catkin_init_workspace 
+
+git clone https://github.com/grassjelly/turtlebot_simulator
+git clone https://github.com/JenniferBuehler/common-sensors
+
+roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=worlds/willowgarage.world
+
+roslaunch turtlebot_gazebo gmapping_demo.launch
+roslaunch turtlebot_rviz_launchers view_navigation.launch
+roslaunch turtlebot_gazebo amcl_demo.launch map_file:=<full path to your map YAML file>
+
+http://wiki.ros.org/turtlebot/Tutorials/indigo/Adding%20a%20lidar%20to%20the%20turtlebot%20using%20hector_models%20%28Hokuyo%20UTM-30LX%29
