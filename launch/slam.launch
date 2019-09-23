@@ -35,4 +35,5 @@
         <param name="lasamplestep" value="0.005"/>
         <param name="transform_publish_period" value="0.1"/>
     </node>
+    <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
 </launch>
