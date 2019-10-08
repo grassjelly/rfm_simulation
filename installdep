@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e
+
+SRC_PATH=$(dirname "$(dirname "$(readlink -f "$0")")")
+
+sudo apt-get install -y \
+ros-$ROS_DISTRO-joy \
+ros-$ROS_DISTRO-turtlebot-simulator \
+ros-$ROS_DISTRO-turtlebot-apps \
+ros-$ROS_DISTRO-yocs-velocity-smoother \
+ros-$ROS_DISTRO-hector-sensors-description
+
+cd SRC_PATH
+git clone https://github.com/grassjelly/turtlebot
+
+
+
