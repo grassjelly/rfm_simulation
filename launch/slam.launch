@@ -36,4 +36,8 @@
         <param name="transform_publish_period" value="0.1"/>
     </node>
     <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+
+    <arg name ="rviz" default="true" />
+    <arg name ="rviz_file" default="$(find rfm_simulation)/rviz/navigate.rviz"/>
+    <node pkg ="rviz" type="rviz" name="rviz" output="screen" args= "-d $(arg rviz_file)" if="$(arg rviz)"/>
 </launch>
