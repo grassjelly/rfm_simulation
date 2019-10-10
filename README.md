@@ -25,7 +25,7 @@ Run the Turtlebot's simulation environment:
 
     roslaunch rfm_simulation simulation.launch
 
-Loading the simulation environment during the first run may take a while.
+- Take note that loading the simulation environment during the first run may take a while.
 
 ## Creating a new map (optional)
 
