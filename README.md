@@ -42,5 +42,5 @@ Once you're done mapping you, save the map by running:
     roscd rfm_simulation/maps
     rosrun map_server map_saver -f <name_of_map>
 
-* Don't forget to update launch/navigate.launch with your newly created map.
+* Remember to update [launch/navigate.launch](https://github.com/ncs-robotmanager/rfm_simulation/blob/master/launch/navigate.launch#L2) with your newly created map.
 
