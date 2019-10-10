@@ -4,10 +4,20 @@ Simulation environment to test Robot Manager's ROS adaptor using a Turtlebot 2.
 
 ## Installation
 
+Download the repository in your ROS workspace:
+
+    cd <your_ros_ws>/src
+    git clone https://github.com/ncs-robotmanager/rfm_simulation
+
 Run the installer script:
 
      cd rfm_simulation
     ./installdep
+
+Build your workspace:
+
+    cd <your_ros_ws>
+    catkin_make
     
 ## Simulation
 
