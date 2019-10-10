@@ -12,7 +12,4 @@ ros-$ROS_DISTRO-yocs-velocity-smoother \
 ros-$ROS_DISTRO-hector-sensors-description
 
 cd SRC_PATH
-git clone https://github.com/grassjelly/turtlebot
-
-
-
+git clone https://github.com/ncs-robotmanager/turtlebot
