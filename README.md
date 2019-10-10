@@ -4,20 +4,20 @@ Simulation environment to test Robot Manager's ROS adaptor using a Turtlebot 2.
 
 ## Installation
 
-Download the repository in your ROS workspace:
+1. Download the repository in your ROS workspace:
 
-    cd <your_ros_ws>/src
-    git clone https://github.com/ncs-robotmanager/rfm_simulation
+        cd <your_ros_ws>/src
+        git clone https://github.com/ncs-robotmanager/rfm_simulation
 
-Run the installer script:
+2. Run the installer script:
 
-     cd rfm_simulation
-    ./installdep
+        cd rfm_simulation
+        ./installdep
 
-Build your workspace:
+3. Build your workspace:
 
-    cd <your_ros_ws>
-    catkin_make
+        cd <your_ros_ws>
+        catkin_make
     
 ## Simulation
 
@@ -25,22 +25,26 @@ Run the Turtlebot's simulation environment:
 
     roslaunch rfm_simulation simulation.launch
 
-## Creating a new map
+Loading the simulation environment during the first run may take a while.
 
-First run a minimal version of the simulation(without navigation stack):
+## Creating a new map (optional)
 
-    roslaunch rfm_simulation minimal_simulation.launch
+This step is optional and only needed if you want to build a map for your new Gazebo environment. 
 
-Run the gmapping package and RVIZ:
+1. First, run a minimal version of the simulation(without navigation stack):
 
-    roslaunch rfm_simulation slam.launch
+        roslaunch rfm_simulation minimal_simulation.launch
+
+2. Run the gmapping package and RVIZ:
+
+        roslaunch rfm_simulation slam.launch
 
 * Now you can use RVIZ to send a goal to the robot and create a map.
 
-Once you're done mapping you, save the map by running:
+3. Once you're done mapping you, save the map by running:
 
-    roscd rfm_simulation/maps
-    rosrun map_server map_saver -f <name_of_map>
+        roscd rfm_simulation/maps
+        rosrun map_server map_saver -f <name_of_map>
 
 * Remember to update [launch/navigate.launch](https://github.com/ncs-robotmanager/rfm_simulation/blob/master/launch/navigate.launch#L2) with your newly created map.
 
