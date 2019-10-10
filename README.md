@@ -1,6 +1,6 @@
 # rfm_simulation
 
-Simulation environment to test Robot Manager's ROS adaptor using a Turtlebot 2.
+Simulation environment to test Robot Manager's ROS [adaptor](https://github.com/ncs-robotmanager/rfm_ros_bridge)  using a Turtlebot 2.
 
 ## Installation
 
