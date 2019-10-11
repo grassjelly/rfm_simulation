@@ -11,5 +11,5 @@ ros-$ROS_DISTRO-turtlebot-apps \
 ros-$ROS_DISTRO-yocs-velocity-smoother \
 ros-$ROS_DISTRO-hector-sensors-description
 
-cd SRC_PATH
+cd $SRC_PATH
 git clone https://github.com/ncs-robotmanager/turtlebot
